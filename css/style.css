@@ -1,0 +1,17 @@
+.content {
+    width: 231px;
+    overflow: hidden;
+    margin: 200px auto 0 auto;
+}
+
+.footer {
+    padding: 50px 0px;
+    color: #fff;
+    text-align: center;
+}
+
+@media(max-width: 330px) {
+    .img {
+        display: none;
+    }
+}
