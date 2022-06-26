@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="css/style.css">
     <title>Guess number 1-3 Артёма</title>
@@ -34,11 +34,16 @@
         </div>
     </nav>
     <div class="content">
-        <label>Введите число: 1-3</label><input type="text" maxlength="1" autocomplete="off" class="input-0"
+        <label>Введите число: 1-3</label>
+        <input onkeyup="validateInput()" type="text" type="range" maxlength="1" autocomplete="off" class="input-0"
             id="number">
-        <button onclick="fun_1()">ОК</button>
+        <button id="button" disabled onclick="handler()">ОК</button>
     </div>
-    <footer class="footer mt-auto py-3 bg-dark">
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <button class="buttonStart" onclick="spinerShow()">Start</button>
+    <footer class="mt-auto py-3 bg-dark">
         <div class="container">
             <span class="text-muted">Copiright 2022</span>
         </div>

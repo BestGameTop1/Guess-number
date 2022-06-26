@@ -1,12 +1,37 @@
 .content {
+    display: none;
     width: 231px;
     overflow: hidden;
-    margin: 200px auto 0 auto;
+    margin: 230px auto 0 auto;
 }
 
-.footer {
+.bg:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.spinner-border {
+    display: none;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 250px;
+}
+
+.buttonStart {
+    font-size: 30px;
+    padding: 10px 50px;
+    margin: 230px auto;
+    display: block;
+}
+
+footer {
     padding: 50px 0px;
-    color: #fff;
     text-align: center;
 }
 
