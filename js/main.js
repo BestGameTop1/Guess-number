@@ -3,6 +3,7 @@ let message = document.getElementById("message")
 let modalTitle = document.getElementById("exampleModalLabel")
 let trFl = document.getElementById("trFl")
 let btn = document.getElementById("btn")
+let button = document.getElementById("button")
 let body = document.querySelector("body")
 let spiner = document.querySelector(".spinner-border")
 let btnStart = document.querySelector(".buttonStart")
@@ -53,29 +54,28 @@ function validateResult(number) {
 }
 
 function validateInput() {
-    if (document.getElementById("number").value === "") {
-        document.getElementById('button').disabled = true;
+    if (number.value === "") {
+        button.disabled = true;
     } else {
-        document.getElementById('button').disabled = false;
+        button.disabled = false;
     }
 }
 
-function gameResult(params) {
+function gameResult() {
     if (number.value == ran) {
-        showModal()
         modalTitle.textContent = "Вы выйграли!"
         message.textContent = "Вы выйграли! Комп'ютер ввел число: " + ran
         message.style.color = "green"
         number.classList.add("btn-outline-success");
 
     } else {
-        showModal()
         modalTitle.textContent = "Вы проиграли!"
         message.textContent = "Вы проиграли! Комп'ютер ввел число: " + ran
         message.style.color = "red"
         number.classList.add("btn-outline-danger");
 
     }
+    showModal()
 }
 
 function refresh() {
